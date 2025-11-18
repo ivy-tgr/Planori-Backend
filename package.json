@@ -1,0 +1,21 @@
+{
+  "name": "planori-backend",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Tobias Gretler",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "firebase-admin": "^13.6.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}

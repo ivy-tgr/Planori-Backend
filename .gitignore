@@ -1,0 +1,34 @@
+# node modules (Abhängigkeiten, sehr groß!)
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Umgebungsvariablen, Schlüssel, Passwörter
+.env
+.env.*
+serviceAccountKey.json
+
+# Build- und Cache-Ordner (optional, falls vorhanden)
+dist/
+build/
+.cache/
+.parcel-cache/
+
+# Sonstiges
+*.tsbuildinfo
+.npm
+.eslintcache
+.rpt2_cache/
+*.tgz
+node_repl_history
+
+# IDE-Einstellungen (optional, Empfehlung)
+.vscode/
+.idea/
+.DS_Store
