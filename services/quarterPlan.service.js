@@ -55,34 +55,44 @@ exports.create = async (data) => {
   
   const qpId = qpRef.id;
   
-  if (Array.isArray(activities) && activities.length > 0) {
-    await Promise.all(activities.map(activity =>
-      db.collection('activities').add({
-        name: activity.title || 'Untitled Activity',
-        date: activity.date,
-        location: activity.location,
-        redThread: activity.redThread || '',
-        qpId,
-        safetyNotes: '',
-        createdBy: activity.leader || createdBy || 'unknown',
-        createdAt: new Date().toISOString()
-      })
-    ));
-  }
+if (Array.isArray(activities) && activities.length > 0) {
+  await Promise.all(activities.map(activity =>
+    db.collection('activities').add({
+      name: activity.title || 'Untitled Activity',
+      date: activity.date,
+      location: activity.location,
+      redThread: activity.redThread || '',
+      qpId,
+      safetyNotes: activity.safetyNotes || '',
+      createdBy: activity.leader || createdBy || 'unknown',
+      startTime: activity.startTime || '',
+      endTime: activity.endTime || '',
+      priority: activity.priority || 'Medium',
+      materials: activity.materials || [],
+      programSections: activity.programSections || [],
+      createdAt: new Date().toISOString()
+    })
+  ));
+}
+
   
-  if (Array.isArray(events) && events.length > 0) {
-    await Promise.all(events.map(event =>
-      db.collection('activities').add({
-        name: event.title || 'Untitled Event',
-        date: event.date,
-        location: event.location,
-        qpId,
-        safetyNotes: '',
-        createdBy: createdBy || 'unknown',
-        createdAt: new Date().toISOString()
-      })
-    ));
-  }
+await Promise.all(events.map(event =>
+  db.collection('activities').add({
+    name: event.title || 'Untitled Event',
+    date: event.date,
+    location: event.location,
+    qpId,
+    safetyNotes: '',
+    createdBy: createdBy || 'unknown',
+    startTime: event.startTime || '',
+    endTime: event.endTime || '',
+    priority: 'Low',
+    materials: [],
+    programSections: [],
+    createdAt: new Date().toISOString()
+  })
+));
+
   
   return {
     message: 'Quarter plan created successfully',

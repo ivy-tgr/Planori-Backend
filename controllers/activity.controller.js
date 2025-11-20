@@ -22,3 +22,21 @@ exports.getById = async (req, res, next) => {
     next(error);
   }
 };
+
+exports.update = async (req, res, next) => {
+  try {
+    const updated = await activityService.update(req.params.id, req.body);
+    res.json(updated);
+  } catch (error) {
+    next(error);
+  }
+};
+
+exports.create = async (req, res, next) => {
+  try {
+    const created = await activityService.create(req.body);
+    res.status(201).json(created);
+  } catch (error) {
+    next(error);
+  }
+};
