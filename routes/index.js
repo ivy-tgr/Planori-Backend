@@ -4,7 +4,9 @@ const authRoutes = require('./auth.routes');
 const activityRoutes = require('./activity.routes');
 const quarterPlanRoutes = require('./quarterPlan.routes');
 const dashboardRoutes = require('./dashboard.routes');
+const materialRoutes = require('./material.routes');
 
+router.use('/materials', materialRoutes);
 router.use('/auth', authRoutes);
 router.use('/activities', activityRoutes);
 router.use('/quarter-plans', quarterPlanRoutes);
