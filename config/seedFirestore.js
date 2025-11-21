@@ -55,7 +55,16 @@ const quarterPlans = [
     endDate: '2025-02-28',
     description: 'Vergangenes Programm mit Mittelalter-Thema. Ritterturnier, Burgen erkunden und historische Spiele.',
     createdBy: 'u2'
-  }
+  },
+  {
+  id: 'qp6',
+  name: 'Herbst 2025 - Mr. Cailler',
+  startDate: '2025-10-25',
+  endDate: '2025-11-29',
+  description: 'Schnitzeljagd und Abenteuer rund um Mr. Cailler, Schoggi-Formen basteln, Rätsel, OL, und Schlaraffenland. Finale mit Schoggi-Fondue.',
+  createdBy: 'u2' 
+}
+
 ];
 
 
@@ -77,7 +86,13 @@ const activities = [
   // Winter
   { id: 'a12', name: 'Winterolympiade', date: '2025-12-12', qpId: 'qp4', location: 'Sporthalle', redThread: 'Spiele & Spaß', safetyNotes: 'Rutschgefahr', createdBy: 'u5' },
   { id: 'a13', name: 'Schlittenrennen', date: '2026-01-20', qpId: 'qp4', location: 'Hügel', redThread: 'Wettkampf', safetyNotes: 'Helm & Handschuhe', createdBy: 'u6' },
-  { id: 'a14', name: 'Waffel Challenge', date: '2026-02-10', qpId: 'qp4', location: 'Pfadi Heim', redThread: 'Backwettbewerb', safetyNotes: 'Verbrühungen',  createdBy: 'u1' }
+  { id: 'a14', name: 'Waffel Challenge', date: '2026-02-10', qpId: 'qp4', location: 'Pfadi Heim', redThread: 'Backwettbewerb', safetyNotes: 'Verbrühungen',  createdBy: 'u1' },
+
+  { id: 'a15', name: 'Koprsantreten & Thingabend', date: '2025-10-25', qpId: 'qp6', location: 'Albisrieden', redThread: 'Auftakt, Sammeln & Thing', safetyNotes: '', createdBy: 'u2' },
+  { id: 'a16', name: 'Schoggiformen basteln & Schnitzeljagd', date: '2025-11-01', qpId: 'qp6', location: 'WH Aesch', redThread: 'Schoggiformen herstellen und Rätsel lösen', safetyNotes: '', createdBy: 'u2' },
+  { id: 'a17', name: 'Brownie OL & Rettung Mr. Cailler', date: '2025-11-08', qpId: 'qp6', location: 'WH Ettenberg', redThread: 'Inhalt Schokolade suchen, Brownie-Fake, Rettungsmission', safetyNotes: '', createdBy: 'u2' },
+  { id: 'a18', name: 'Schlaraffenland & Kugel-Spiel', date: '2025-11-22', qpId: 'qp6', location: 'Weritahl', redThread: 'Geländespiel, Schoggikugeln schmuggeln, Mr. Cailler befreien', safetyNotes: '', createdBy: 'u2' },
+  { id: 'a19', name: 'Schoggi-Fondue als Abschluss', date: '2025-11-29', qpId: 'qp6', location: 'Uitikon', redThread: 'Abschlussspiel und Fondue', safetyNotes: '', createdBy: 'u2' },
 ];
 
 

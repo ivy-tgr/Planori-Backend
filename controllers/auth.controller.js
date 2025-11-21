@@ -1,4 +1,4 @@
-const authService = require('../services/auth.service');
+const authService = require('../services/auth.service.js');
 
 exports.verify = async (req, res, next) => {
   try {
